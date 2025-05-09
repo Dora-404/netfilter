@@ -5,13 +5,10 @@ services:
       context: .
       dockerfile: Dockerfile.backend
     volumes:
-      - ./GeoLite2-Country.mmdb:/app/GeoLite2-Country.mmdb
       - /etc/filter:/etc/filter
       - /var/log:/var/log
-    cap_add:
-      - NET_ADMIN
-    ports:
-      - "8080:8080"  # Пробрасываем порт 8080
+    network_mode: "host"  # Используем сеть хоста
+    privileged: true      # Максимальные привилегии
     command: ["./filter"]
   frontend:
     build:

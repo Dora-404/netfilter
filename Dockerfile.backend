@@ -2,24 +2,20 @@ FROM golang:1.21
 
 RUN apt-get update && apt-get install -y \
     libpcap-dev \
-    iptables \
-    iproute2 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY filter.go .
-COPY GeoLite2-Country.mmdb .
 
 RUN go mod init filter
 RUN go get github.com/gin-gonic/gin \
     github.com/google/gopacket \
     github.com/google/gopacket/pcap \
-    github.com/gorilla/websocket \
-    github.com/oschwald/maxminddb-golang
+    github.com/gorilla/websocket
 RUN go build -o filter filter.go
 
 RUN mkdir -p /etc/filter /var/log
-RUN touch /var/log/filter.log
-RUN chmod 644 /var/log/filter.log
+RUN touch /var/log/filter.log /app/traffic.log
+RUN chmod 644 /var/log/filter.log /app/traffic.log
 
 CMD ["./filter"]
