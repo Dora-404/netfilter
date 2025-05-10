@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 	"sync"
@@ -22,14 +23,15 @@ const (
 	iface       = "ens33"
 	logFile     = "/app/filter.log"
 	trafficFile = "/app/traffic.log"
+	listsDir    = "/etc/filter/lists"
 )
 
 var (
-	whitelist = make(map[string]bool)
-	blacklist = make(map[string]bool)
-	mutex     = &sync.RWMutex{}
-	clients   = make(map[*websocket.Conn]bool)
-	broadcast = make(chan []byte)
+	whitelists = make(map[string]map[string]bool) // map[listName]map[ip]bool
+	blacklists = make(map[string]map[string]bool)
+	mutex      = &sync.RWMutex{}
+	clients    = make(map[*websocket.Conn]bool)
+	broadcast  = make(chan []byte)
 
 	// Статистика за текущую секунду
 	currentStats = struct {
@@ -63,33 +65,93 @@ func initLogs() {
 	if err != nil {
 		log.Fatalf("Ошибка открытия traffic.log: %v", err)
 	}
+
+	// Создаём директорию для списков
+	if err := os.MkdirAll(listsDir, 0755); err != nil {
+		log.Fatalf("Ошибка создания директории для списков: %v", err)
+	}
+}
+
+func saveLists() {
+	mutex.Lock()
+	defer mutex.Unlock()
+
+	// Сохраняем whitelists
+	for listName, list := range whitelists {
+		fileName := filepath.Join(listsDir, fmt.Sprintf("%s_WL.txt", listName))
+		file, err := os.Create(fileName)
+		if err != nil {
+			log.Printf("Ошибка сохранения whitelist %s: %v", listName, err)
+			continue
+		}
+		defer file.Close()
+		for ip := range list {
+			fmt.Fprintf(file, "%s\n", ip)
+		}
+	}
+
+	// Сохраняем blacklists
+	for listName, list := range blacklists {
+		fileName := filepath.Join(listsDir, fmt.Sprintf("%s_BL.txt", listName))
+		file, err := os.Create(fileName)
+		if err != nil {
+			log.Printf("Ошибка сохранения blacklist %s: %v", listName, err)
+			continue
+		}
+		defer file.Close()
+		for ip := range list {
+			fmt.Fprintf(file, "%s\n", ip)
+		}
+	}
 }
 
 func loadLists() {
 	mutex.Lock()
 	defer mutex.Unlock()
-	whitelist = make(map[string]bool)
-	blacklist = make(map[string]bool)
+	whitelists = make(map[string]map[string]bool)
+	blacklists = make(map[string]map[string]bool)
 
-	if file, err := os.Open("/etc/filter/whitelist.txt"); err == nil {
-		defer file.Close()
-		scanner := bufio.NewScanner(file)
-		for scanner.Scan() {
-			ip := strings.TrimSpace(scanner.Text())
-			if ip != "" {
-				whitelist[ip] = true
-			}
-		}
+	// Читаем все файлы из директории
+	files, err := os.ReadDir(listsDir)
+	if err != nil {
+		log.Printf("Ошибка чтения директории списков: %v", err)
+		return
 	}
 
-	if file, err := os.Open("/etc/filter/blacklist.txt"); err == nil {
-		defer file.Close()
-		scanner := bufio.NewScanner(file)
-		for scanner.Scan() {
-			ip := strings.TrimSpace(scanner.Text())
-			if ip != "" {
-				blacklist[ip] = true
+	for _, file := range files {
+		name := file.Name()
+		if strings.HasSuffix(name, "_WL.txt") {
+			listName := strings.TrimSuffix(name, "_WL.txt")
+			whitelists[listName] = make(map[string]bool)
+			f, err := os.Open(filepath.Join(listsDir, name))
+			if err != nil {
+				log.Printf("Ошибка открытия %s: %v", name, err)
+				continue
 			}
+			scanner := bufio.NewScanner(f)
+			for scanner.Scan() {
+				ip := strings.TrimSpace(scanner.Text())
+				if ip != "" {
+					whitelists[listName][ip] = true
+				}
+			}
+			f.Close()
+		} else if strings.HasSuffix(name, "_BL.txt") {
+			listName := strings.TrimSuffix(name, "_BL.txt")
+			blacklists[listName] = make(map[string]bool)
+			f, err := os.Open(filepath.Join(listsDir, name))
+			if err != nil {
+				log.Printf("Ошибка открытия %s: %v", name, err)
+				continue
+			}
+			scanner := bufio.NewScanner(f)
+			for scanner.Scan() {
+				ip := strings.TrimSpace(scanner.Text())
+				if ip != "" {
+					blacklists[listName][ip] = true
+				}
+			}
+			f.Close()
 		}
 	}
 }
@@ -142,17 +204,31 @@ func handlePackets() {
 		currentStats.Unlock()
 
 		mutex.RLock()
-		if len(whitelist) > 0 && !whitelist[clientIP] {
+		// Проверяем whitelists
+		passed := false
+		for listName, list := range whitelists {
+			if listName == "default" && list[clientIP] {
+				passed = true
+				break
+			}
+		}
+		if len(whitelists) > 0 && !passed {
 			mutex.RUnlock()
 			currentStats.Lock()
 			currentStats.WLBytes += bytes
 			currentStats.Unlock()
 			continue
 		}
-		mutex.RUnlock()
 
-		mutex.RLock()
-		if blacklist[clientIP] {
+		// Проверяем blacklists
+		dropped := false
+		for listName, list := range blacklists {
+			if listName == "default" && list[clientIP] {
+				dropped = true
+				break
+			}
+		}
+		if dropped {
 			mutex.RUnlock()
 			currentStats.Lock()
 			currentStats.BLBytes += bytes
@@ -228,6 +304,179 @@ func getTrafficData(c *gin.Context) {
 	c.JSON(200, entries)
 }
 
+func getLists(c *gin.Context) {
+	mutex.RLock()
+	defer mutex.RUnlock()
+	c.JSON(200, gin.H{
+		"whitelists": whitelists,
+		"blacklists": blacklists,
+	})
+}
+
+func manageList(c *gin.Context) {
+	var req struct {
+		IP       string `json:"ip"`
+		ListType string `json:"listType"`
+		ListName string `json:"listName"`
+		Action   string `json:"action"`
+	}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		log.Printf("Ошибка парсинга JSON: %v", err)
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
+	log.Printf("Получен запрос: IP=%s, ListType=%s, ListName=%s, Action=%s", req.IP, req.ListType, req.ListName, req.Action)
+
+	mutex.Lock()
+	defer mutex.Unlock()
+
+	var targetLists map[string]map[string]bool
+	if req.ListType == "whitelist" {
+		targetLists = whitelists
+	} else {
+		targetLists = blacklists
+	}
+
+	if _, exists := targetLists[req.ListName]; !exists {
+		targetLists[req.ListName] = make(map[string]bool)
+	}
+
+	targetList := targetLists[req.ListName]
+	if req.Action == "add" {
+		targetList[req.IP] = true
+	} else if req.Action == "remove" {
+		delete(targetList, req.IP)
+	}
+
+	// Сохраняем списки после изменения
+	saveLists()
+
+	c.JSON(200, gin.H{"message": "Успешно"})
+}
+
+func bulkManageList(c *gin.Context) {
+	var req struct {
+		ListType string `json:"listType"`
+		ListName string `json:"listName"`
+		Content  string `json:"content"`
+	}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		log.Printf("Ошибка парсинга JSON: %v", err)
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
+	log.Printf("Получен запрос bulk: ListType=%s, ListName=%s, Content=%s", req.ListType, req.ListName, req.Content)
+
+	mutex.Lock()
+	defer mutex.Unlock()
+
+	var targetLists map[string]map[string]bool
+	if req.ListType == "whitelist" {
+		targetLists = whitelists
+	} else {
+		targetLists = blacklists
+	}
+
+	if _, exists := targetLists[req.ListName]; !exists {
+		targetLists[req.ListName] = make(map[string]bool)
+	}
+
+	targetList := targetLists[req.ListName]
+	for ip := range targetList {
+		delete(targetList, ip)
+	}
+
+	lines := strings.Split(req.Content, "\n")
+	for _, line := range lines {
+		ip := strings.TrimSpace(line)
+		if ip != "" {
+			targetList[ip] = true
+		}
+	}
+
+	// Сохраняем списки после изменения
+	saveLists()
+
+	c.JSON(200, gin.H{"message": "Список обновлён"})
+}
+
+func createList(c *gin.Context) {
+	var req struct {
+		ListType string `json:"listType"`
+		ListName string `json:"listName"`
+	}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		log.Printf("Ошибка парсинга JSON: %v", err)
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
+	log.Printf("Создание списка: ListType=%s, ListName=%s", req.ListType, req.ListName)
+
+	mutex.Lock()
+	defer mutex.Unlock()
+
+	var targetLists map[string]map[string]bool
+	if req.ListType == "whitelist" {
+		targetLists = whitelists
+	} else {
+		targetLists = blacklists
+	}
+
+	if _, exists := targetLists[req.ListName]; exists {
+		c.JSON(400, gin.H{"error": "Список с таким именем уже существует"})
+		return
+	}
+
+	targetLists[req.ListName] = make(map[string]bool)
+	saveLists()
+
+	c.JSON(200, gin.H{"message": "Список создан"})
+}
+
+func deleteList(c *gin.Context) {
+	var req struct {
+		ListType string `json:"listType"`
+		ListName string `json:"listName"`
+	}
+	if err := c.ShouldBindJSON(&req); err != nil {
+		log.Printf("Ошибка парсинга JSON: %v", err)
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
+	log.Printf("Удаление списка: ListType=%s, ListName=%s", req.ListType, req.ListName)
+
+	mutex.Lock()
+	defer mutex.Unlock()
+
+	var targetLists map[string]map[string]bool
+	if req.ListType == "whitelist" {
+		targetLists = whitelists
+	} else {
+		targetLists = blacklists
+	}
+
+	if _, exists := targetLists[req.ListName]; !exists {
+		c.JSON(404, gin.H{"error": "Список не найден"})
+		return
+	}
+
+	delete(targetLists, req.ListName)
+
+	// Удаляем файл
+	var suffix string
+	if req.ListType == "whitelist" {
+		suffix = "WL"
+	} else {
+		suffix = "BL"
+	}
+	fileName := filepath.Join(listsDir, fmt.Sprintf("%s_%s.txt", req.ListName, suffix))
+	if err := os.Remove(fileName); err != nil {
+		log.Printf("Ошибка удаления файла %s: %v", fileName, err)
+	}
+
+	c.JSON(200, gin.H{"message": "Список удалён"})
+}
+
 func main() {
 	initLogs()
 	loadLists()
@@ -240,6 +489,11 @@ func main() {
 	r := gin.Default()
 	r.GET("/traffic", getTrafficData)
 	r.GET("/ws", wsHandler)
+	r.GET("/api/lists", getLists)
+	r.POST("/api/manage", manageList)
+	r.POST("/api/bulk-manage", bulkManageList)
+	r.POST("/api/create-list", createList)
+	r.POST("/api/delete-list", deleteList)
 
 	if err := r.Run(":8080"); err != nil {
 		log.Fatalf("Ошибка запуска сервера: %v", err)
