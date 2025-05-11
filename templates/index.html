@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Filter Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+</head>
+<body>
+    <div id="notification" class="notification" style="display: none;"></div>
+    <div class="container">
+        <h1>Network Filter Dashboard</h1>
+        <div class="tabs">
+            <button class="tablink" onclick="openTab('Overview')">Overview</button>
+            <button class="tablink" onclick="openTab('Interfaces')">Interfaces</button>
+            <button class="tablink" onclick="openTab('Monitoring')">Monitoring Objects</button>
+            <button class="tablink" onclick="openTab('Thresholds')">Thresholds</button>
+            <button class="tablink" onclick="openTab('Countermeasures')">Countermeasures</button>
+            <button class="tablink" onclick="openTab('Charts')">Charts</button>
+        </div>
+        <div id="Overview" class="tabcontent">
+            <h2>Overview</h2>
+            <h3>Monitoring Objects</h3>
+            <table id="monitoringTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Interfaces</th>
+                        <th>IPs</th>
+                        <th>Threshold</th>
+                        <th>Filter Active</th>
+                        <th>Template</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <h3>Interfaces</h3>
+            <table id="interfacesTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="Interfaces" class="tabcontent">
+            <h2>Configure Interfaces</h2>
+            <select id="interfaceList"></select>
+            <select id="interfaceType">
+                <option value="internal">Internal</option>
+                <option value="external">External</option>
+            </select>
+            <button onclick="setInterfaceType()">Set Type</button>
+        </div>
+        <div id="Monitoring" class="tabcontent">
+            <h2>Create Monitoring Object</h2>
+            <input type="text" id="moName" placeholder="Object Name">
+            <select id="moInterfaces" multiple></select>
+            <input type="text" id="moIPs" placeholder="IPs (comma-separated)">
+            <input type="number" id="moThreshold" placeholder="Threshold (bytes)">
+            <input type="text" id="moTemplate" placeholder="Template Name">
+            <button onclick="createMonitoringObject()">Create</button>
+        </div>
+        <div id="Thresholds" class="tabcontent">
+            <h2>Set Thresholds</h2>
+            <select id="thresholdMO"></select>
+            <input type="number" id="thresholdValue" placeholder="Threshold (bytes)">
+            <button onclick="setThreshold()">Set</button>
+        </div>
+        <div id="Countermeasures" class="tabcontent">
+            <h2>Configure Countermeasures</h2>
+            <select id="counterMO"></select>
+            <input type="text" id="counterIP" placeholder="IP Address">
+            <select id="counterType">
+                <option value="whitelist">Whitelist</option>
+                <option value="blacklist">Blacklist</option>
+            </select>
+            <button onclick="setCountermeasure()">Add Rule</button>
+            <button onclick="removeCountermeasure()">Remove Rule</button>
+        </div>
+        <div id="Charts" class="tabcontent">
+            <h2>Monitoring Charts</h2>
+            <select id="chartMO" onchange="loadChartData()"></select>
+            <select id="chartRange" onchange="loadChartData()">
+                <option value="5m">Last 5 Minutes</option>
+                <option value="30m">Last 30 Minutes</option>
+                <option value="1h">Last 1 Hour</option>
+                <option value="3h">Last 3 Hours</option>
+                <option value="24h">Last 24 Hours</option>
+            </select>
+            <div style="position: relative; width: 800px; height: 400px;">
+                <canvas id="statsChart" style="position: absolute; top: 0; left: 0;"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

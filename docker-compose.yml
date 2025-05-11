@@ -1,20 +1,31 @@
-version: '3'
+version: '3.8'
+
 services:
-  backend:
+  web:
     build:
       context: .
-      dockerfile: Dockerfile.backend
-    volumes:
-      - /etc/filter:/etc/filter
-      - /var/log:/var/log
-    network_mode: "host"  # Используем сеть хоста
-    privileged: true      # Максимальные привилегии
-    command: ["./filter"]
-  frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile.frontend
+      dockerfile: Dockerfile.web
     ports:
-      - "8081:8081"
+      - "5000:5000"
+    volumes:
+      - ./filter.db:/app/filter.db
     depends_on:
-      - backend
+      - filter
+    networks:
+      - app-network
+
+  filter:
+    build:
+      context: .
+      dockerfile: Dockerfile.traffic
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - ./filter.db:/app/filter.db
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -2,17 +2,21 @@ FROM golang:1.21
 
 RUN apt-get update && apt-get install -y \
     libpcap-dev \
+    sqlite3 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY filter.go .
+COPY traffic.go .
 
+# Инициализируем модуль
 RUN go mod init network-filter
+# Добавляем зависимости
 RUN go get github.com/google/gopacket \
     github.com/google/gopacket/pcap \
     github.com/mattn/go-sqlite3
+# Устанавливаем зависимости
 RUN go mod tidy
 
-RUN go build -o filter filter.go
+RUN go build -o traffic traffic.go
 
-CMD ["./filter"]
+CMD ["./traffic"]
