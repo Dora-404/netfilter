@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    network_mode: host
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./data:/app/data
+      - /var/log:/var/log
+    environment:
+      - FLASK_ENV=development
+    depends_on:
+      - iptables-init
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  stats-collector:
+    build: .
+    network_mode: host
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./data:/app/data
+      - /var/log:/var/log
+    command: python collect_stats.py
+    depends_on:
+      - iptables-init
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  iptables-init:
+    build: .
+    network_mode: host
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./data:/app/data
+      - /var/log:/var/log
+    command: python initialize_iptables.py
+    # No restart policy, as this is a one-time initialization
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  data:

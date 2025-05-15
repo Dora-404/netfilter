@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Resource</title>
+    <!-- Подключаем Chart.js через CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Manage Resource: {{ resource["name"] }}</h1>
+    <p>IP: {{ resource["ip"] }}</p>
+    <p>Ports: {{ resource["ports"] or "All" }}</p>
+    <p>Chain: {{ resource["chain"] }}</p>
+
+    <h2>Traffic Statistics</h2>
+    <!-- График сверху -->
+    <canvas id="trafficChart" width="600" height="300"></canvas>
+
+    <script>
+        let trafficChart;
+
+        async function loadStats() {
+            const response = await fetch('{{ url_for("traffic_stats", resource_id=resource["id"]) }}');
+            const stats = await response.json();
+
+            // Подготовка данных для графика
+            const timestamps = stats.map(stat => new Date(stat.timestamp * 1000).toLocaleString());
+            const packets = stats.map(stat => stat.packets || 0);
+            const bytes = stats.map(stat => stat.bytes || 0);
+
+            // Обновляем или создаём график
+            if (trafficChart) {
+                trafficChart.data.labels = timestamps;
+                trafficChart.data.datasets[0].data = packets;
+                trafficChart.data.datasets[1].data = bytes;
+                trafficChart.update();
+            } else {
+                const ctx = document.getElementById('trafficChart').getContext('2d');
+                trafficChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: timestamps,
+                        datasets: [
+                            {
+                                label: 'Packets',
+                                data: packets,
+                                borderColor: 'blue',
+                                fill: false
+                            },
+                            {
+                                label: 'Bytes',
+                                data: bytes,
+                                borderColor: 'green',
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Time'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Value'
+                                },
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Автоматическое обновление графика каждые 10 секунд
+        setInterval(loadStats, 10000);
+
+        // Загружаем статистику при загрузке страницы
+        loadStats();
+    </script>
+
+    <a href="{{ url_for('edit_resource', resource_id=resource['id']) }}">Edit Resource</a><br><br>
+
+    <h2>Configure IP Lists</h2>
+    <h3>Add IP to List</h3>
+    <form method="POST">
+        <label for="list_type">List Type:</label>
+        <select name="list_type" id="list_type">
+            <option value="wl">White List</option>
+            <option value="bl">Black List</option>
+            <option value="tbl">Temporary Black List</option>
+        </select><br><br>
+        <label for="ip">IP Address:</label>
+        <input type="text" name="ip" id="ip" required><br><br>
+        <input type="submit" value="Add IP">
+    </form>
+
+    <h3>Current Lists</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>List Type</th>
+                <th>IP</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in lists %}
+            <tr>
+                <td>{{ item["list_type"] }}</td>
+                <td>{{ item["ip"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

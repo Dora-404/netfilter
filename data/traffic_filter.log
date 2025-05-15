@@ -1,0 +1,735 @@
+2025-05-14 19:17:15,475 [INFO] Initializing iptables and ipset
+2025-05-14 19:17:15,693 [ERROR] Stats collection failed: no such table: resources
+2025-05-14 19:18:15,747 [ERROR] Stats collection failed: no such table: resources
+2025-05-14 19:19:15,797 [ERROR] Stats collection failed: no such table: resources
+2025-05-14 19:20:15,913 [ERROR] Stats collection failed: no such table: resources
+2025-05-14 19:21:13,385 [INFO] Initializing iptables and ipset
+2025-05-14 19:21:13,407 [DEBUG] Command executed: iptables -F
+Output: 
+2025-05-14 19:21:13,423 [DEBUG] Command executed: iptables -X
+Output: 
+2025-05-14 19:21:13,438 [DEBUG] Command executed: ipset flush
+Output: 
+2025-05-14 19:21:13,610 [ERROR] Stats collection failed: no such table: resources
+2025-05-14 19:21:13,836 [INFO] Initializing database
+2025-05-14 19:21:13,842 [INFO] Database initialized
+2025-05-14 19:21:13,891 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.10:5000
+2025-05-14 19:21:13,891 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-14 19:21:13,892 [INFO]  * Restarting with stat
+2025-05-14 19:21:14,129 [INFO] Initializing database
+2025-05-14 19:21:14,130 [INFO] Database initialized
+2025-05-14 19:21:14,148 [WARNING]  * Debugger is active!
+2025-05-14 19:21:14,149 [INFO]  * Debugger PIN: 806-566-559
+2025-05-14 19:22:13,668 [INFO] Traffic stats collected
+2025-05-14 19:23:13,699 [INFO] Traffic stats collected
+2025-05-14 19:26:47,446 [INFO] Traffic stats collected
+2025-05-14 19:27:47,480 [INFO] Traffic stats collected
+2025-05-14 19:28:47,491 [INFO] Traffic stats collected
+2025-05-14 19:29:31,098 [INFO] Initializing iptables and ipset
+2025-05-14 19:29:31,098 [DEBUG] Initializing database
+2025-05-14 19:29:31,098 [INFO] Initializing database
+2025-05-14 19:29:31,099 [INFO] Database initialized
+2025-05-14 19:29:31,105 [DEBUG] Executing command: iptables -F
+2025-05-14 19:29:31,113 [DEBUG] Command output: 
+2025-05-14 19:29:31,113 [DEBUG] Executing command: iptables -X
+2025-05-14 19:29:31,118 [DEBUG] Command output: 
+2025-05-14 19:29:31,120 [DEBUG] Executing command: ipset flush
+2025-05-14 19:29:31,123 [DEBUG] Command output: 
+2025-05-14 19:29:31,124 [DEBUG] Connecting to database
+2025-05-14 19:29:31,124 [DEBUG] Querying resources table
+2025-05-14 19:29:31,124 [DEBUG] Executing command: iptables-save > /app/data/iptables.rules
+2025-05-14 19:29:31,135 [DEBUG] Command output: 
+2025-05-14 19:29:31,135 [INFO] iptables rules generated and saved
+2025-05-14 19:29:31,356 [INFO] Traffic stats collected
+2025-05-14 19:29:31,614 [INFO] Initializing database
+2025-05-14 19:29:31,615 [INFO] Database initialized
+2025-05-14 19:29:31,663 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.10:5000
+2025-05-14 19:29:31,663 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-14 19:29:31,664 [INFO]  * Restarting with stat
+2025-05-14 19:29:31,901 [INFO] Initializing database
+2025-05-14 19:29:31,901 [INFO] Database initialized
+2025-05-14 19:29:31,916 [WARNING]  * Debugger is active!
+2025-05-14 19:29:31,916 [INFO]  * Debugger PIN: 806-566-559
+2025-05-14 19:30:31,411 [INFO] Traffic stats collected
+2025-05-14 19:31:31,472 [INFO] Traffic stats collected
+2025-05-14 19:32:31,490 [INFO] Traffic stats collected
+2025-05-14 19:33:31,518 [INFO] Traffic stats collected
+2025-05-14 19:34:31,548 [INFO] Traffic stats collected
+2025-05-14 19:35:31,938 [INFO] Traffic stats collected
+2025-05-14 19:36:31,948 [INFO] Traffic stats collected
+2025-05-14 19:37:37,414 [INFO] Traffic stats collected
+2025-05-14 19:38:04,311 [INFO] 192.168.2.10 - - [14/May/2025 19:38:04] "GET / HTTP/1.1" 200 -
+2025-05-14 19:38:29,095 [INFO] 192.168.2.10 - - [14/May/2025 19:38:29] "GET / HTTP/1.1" 200 -
+2025-05-14 19:38:32,424 [INFO] 192.168.2.10 - - [14/May/2025 19:38:32] "GET /add_resource HTTP/1.1" 200 -
+2025-05-14 19:38:37,467 [INFO] Traffic stats collected
+2025-05-14 19:39:37,523 [INFO] Traffic stats collected
+2025-05-14 19:40:37,552 [INFO] Traffic stats collected
+2025-05-14 19:41:37,613 [INFO] Traffic stats collected
+2025-05-14 19:42:37,674 [INFO] Traffic stats collected
+2025-05-14 19:43:37,707 [INFO] Traffic stats collected
+2025-05-14 19:44:37,723 [INFO] Traffic stats collected
+2025-05-14 19:45:37,732 [INFO] Traffic stats collected
+2025-05-14 19:46:37,775 [INFO] Traffic stats collected
+2025-05-14 19:47:37,791 [INFO] Traffic stats collected
+2025-05-14 19:48:37,808 [INFO] Traffic stats collected
+2025-05-14 19:49:37,823 [INFO] Traffic stats collected
+2025-05-14 19:50:37,839 [INFO] Traffic stats collected
+2025-05-14 19:51:37,855 [INFO] Traffic stats collected
+2025-05-14 19:52:37,889 [INFO] Traffic stats collected
+2025-05-14 19:53:37,931 [INFO] Traffic stats collected
+2025-05-14 19:54:48,978 [INFO] Traffic stats collected
+2025-05-14 19:55:48,985 [INFO] Traffic stats collected
+2025-05-14 19:56:51,992 [INFO] Traffic stats collected
+2025-05-14 19:57:52,003 [INFO] Traffic stats collected
+2025-05-14 19:58:52,060 [INFO] Traffic stats collected
+2025-05-14 19:59:52,121 [INFO] Traffic stats collected
+2025-05-14 20:00:52,124 [INFO] Traffic stats collected
+2025-05-14 20:01:52,172 [INFO] Traffic stats collected
+2025-05-14 20:02:52,192 [INFO] Traffic stats collected
+2025-05-14 20:03:52,208 [INFO] Traffic stats collected
+2025-05-14 20:04:52,224 [INFO] Traffic stats collected
+2025-05-14 20:05:52,240 [INFO] Traffic stats collected
+2025-05-14 20:06:52,257 [INFO] Traffic stats collected
+2025-05-14 20:07:52,316 [INFO] Traffic stats collected
+2025-05-14 20:08:52,348 [INFO] Traffic stats collected
+2025-05-14 20:09:52,409 [INFO] Traffic stats collected
+2025-05-14 20:10:52,466 [INFO] Traffic stats collected
+2025-05-14 20:11:26,416 [INFO] 192.168.2.10 - - [14/May/2025 20:11:26] "GET / HTTP/1.1" 200 -
+2025-05-14 20:11:28,784 [INFO] 192.168.2.10 - - [14/May/2025 20:11:28] "GET /add_resource HTTP/1.1" 200 -
+2025-05-14 20:11:52,508 [INFO] Traffic stats collected
+2025-05-14 20:11:56,303 [INFO] Adding resource: test (172.30.30.1, ports: 80,443, chain: TEST_FILTER)
+2025-05-14 20:11:56,334 [INFO] Resource added to database
+2025-05-14 20:11:56,334 [INFO] Initializing iptables and ipset
+2025-05-14 20:11:56,334 [DEBUG] Initializing database
+2025-05-14 20:11:56,334 [INFO] Initializing database
+2025-05-14 20:11:56,335 [INFO] Database initialized
+2025-05-14 20:11:56,335 [DEBUG] Executing command: iptables -F
+2025-05-14 20:11:56,347 [DEBUG] Command output: 
+2025-05-14 20:11:56,347 [DEBUG] Executing command: iptables -X
+2025-05-14 20:11:56,354 [DEBUG] Command output: 
+2025-05-14 20:11:56,354 [DEBUG] Executing command: ipset flush
+2025-05-14 20:11:56,362 [DEBUG] Command output: 
+2025-05-14 20:11:56,362 [DEBUG] Connecting to database
+2025-05-14 20:11:56,362 [DEBUG] Querying resources table
+2025-05-14 20:11:56,362 [INFO] Configuring resource: test (172.30.30.1, chain: TEST_FILTER)
+2025-05-14 20:11:56,362 [DEBUG] Executing command: ipset create wl_test_filter hash:ip
+2025-05-14 20:11:56,436 [DEBUG] Command output: 
+2025-05-14 20:11:56,436 [DEBUG] Executing command: ipset create bl_test_filter hash:ip
+2025-05-14 20:11:56,441 [DEBUG] Command output: 
+2025-05-14 20:11:56,442 [DEBUG] Executing command: ipset create tbl_test_filter hash:ip timeout 3600
+2025-05-14 20:11:56,502 [DEBUG] Command output: 
+2025-05-14 20:11:56,502 [DEBUG] Executing command: iptables -N TEST_FILTER
+2025-05-14 20:11:56,508 [DEBUG] Command output: 
+2025-05-14 20:11:56,508 [DEBUG] Executing command: iptables -A FORWARD -d 172.30.30.1 -p tcp --dport 80 -j TEST_FILTER
+2025-05-14 20:11:56,588 [DEBUG] Command output: 
+2025-05-14 20:11:56,588 [DEBUG] Executing command: iptables -A FORWARD -d 172.30.30.1 -p tcp --dport 443 -j TEST_FILTER
+2025-05-14 20:11:56,594 [DEBUG] Command output: 
+2025-05-14 20:11:56,595 [DEBUG] Executing command: iptables -A TEST_FILTER -m set --match-set wl_test_filter src -j ACCEPT -m comment --comment 'WL: Allow trusted IPs'
+2025-05-14 20:11:56,662 [DEBUG] Command output: 
+2025-05-14 20:11:56,663 [DEBUG] Executing command: iptables -A TEST_FILTER -m set --match-set bl_test_filter src -j DROP -m comment --comment 'BL: Block blacklisted IPs'
+2025-05-14 20:11:56,719 [DEBUG] Command output: 
+2025-05-14 20:11:56,719 [DEBUG] Executing command: iptables -A TEST_FILTER -m set --match-set tbl_test_filter src -j DROP -m comment --comment 'TBL: Temp block IPs'
+2025-05-14 20:11:56,725 [DEBUG] Command output: 
+2025-05-14 20:11:56,726 [DEBUG] Executing command: iptables -A TEST_FILTER -j ACCEPT -m comment --comment 'Default: Allow remaining traffic'
+2025-05-14 20:11:56,731 [DEBUG] Command output: 
+2025-05-14 20:11:56,731 [DEBUG] Executing command: iptables -I TEST_FILTER 1 -m set --match-set wl_test_filter src -j LOG --log-prefix 'WL_PASS_TEST_FILTER: ' --log-level 7
+2025-05-14 20:11:56,903 [DEBUG] Command output: 
+2025-05-14 20:11:56,903 [DEBUG] Executing command: iptables -I TEST_FILTER 2 -m set --match-set bl_test_filter src -j LOG --log-prefix 'BL_DROP_TEST_FILTER: ' --log-level 7
+2025-05-14 20:11:56,909 [DEBUG] Command output: 
+2025-05-14 20:11:56,909 [DEBUG] Executing command: iptables -I TEST_FILTER 3 -m set --match-set tbl_test_filter src -j LOG --log-prefix 'TBL_DROP_TEST_FILTER: ' --log-level 7
+2025-05-14 20:11:56,914 [DEBUG] Command output: 
+2025-05-14 20:11:56,915 [DEBUG] Querying lists for resource_id 1
+2025-05-14 20:11:56,915 [DEBUG] Executing command: iptables-save > /app/data/iptables.rules
+2025-05-14 20:11:56,930 [DEBUG] Command output: 
+2025-05-14 20:11:56,930 [INFO] iptables rules generated and saved
+2025-05-14 20:11:56,931 [INFO] 192.168.2.10 - - [14/May/2025 20:11:56] "[32mPOST /add_resource HTTP/1.1[0m" 302 -
+2025-05-14 20:11:56,968 [INFO] 192.168.2.10 - - [14/May/2025 20:11:56] "GET / HTTP/1.1" 200 -
+2025-05-14 20:11:59,062 [INFO] 192.168.2.10 - - [14/May/2025 20:11:59] "[35m[1mGET /resource/1 HTTP/1.1[0m" 500 -
+2025-05-14 20:11:59,234 [INFO] 192.168.2.10 - - [14/May/2025 20:11:59] "GET /resource/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-14 20:11:59,253 [INFO] 192.168.2.10 - - [14/May/2025 20:11:59] "GET /resource/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-14 20:11:59,333 [INFO] 192.168.2.10 - - [14/May/2025 20:11:59] "GET /resource/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-14 20:12:43,825 [INFO] 192.168.2.10 - - [14/May/2025 20:12:43] "[35m[1mGET /resource/1 HTTP/1.1[0m" 500 -
+2025-05-14 20:12:44,030 [INFO] 192.168.2.10 - - [14/May/2025 20:12:44] "[36mGET /resource/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-14 20:12:44,045 [INFO] 192.168.2.10 - - [14/May/2025 20:12:44] "[36mGET /resource/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-14 20:12:46,180 [INFO] 192.168.2.10 - - [14/May/2025 20:12:46] "GET /add_resource HTTP/1.1" 200 -
+2025-05-14 20:12:52,569 [DEBUG] Collecting stats for chain: TEST_FILTER
+2025-05-14 20:12:52,585 [INFO] Traffic stats collected
+2025-05-14 20:13:00,756 [INFO] Adding resource: test1 (172.30.30.10, ports: , chain: TEST1_FILTER)
+2025-05-14 20:13:00,759 [INFO] Resource added to database
+2025-05-14 20:13:00,759 [INFO] Initializing iptables and ipset
+2025-05-14 20:13:00,759 [DEBUG] Initializing database
+2025-05-14 20:13:00,760 [INFO] Initializing database
+2025-05-14 20:13:00,760 [INFO] Database initialized
+2025-05-14 20:13:00,760 [DEBUG] Executing command: iptables -F
+2025-05-14 20:13:00,816 [DEBUG] Command output: 
+2025-05-14 20:13:00,817 [DEBUG] Executing command: iptables -X
+2025-05-14 20:13:00,844 [DEBUG] Command output: 
+2025-05-14 20:13:00,844 [DEBUG] Executing command: ipset flush
+2025-05-14 20:13:00,849 [DEBUG] Command output: 
+2025-05-14 20:13:00,849 [DEBUG] Connecting to database
+2025-05-14 20:13:00,850 [DEBUG] Querying resources table
+2025-05-14 20:13:00,850 [INFO] Configuring resource: test (172.30.30.1, chain: TEST_FILTER)
+2025-05-14 20:13:00,850 [DEBUG] Executing command: ipset create wl_test_filter hash:ip
+2025-05-14 20:13:00,872 [ERROR] Command failed: ipset create wl_test_filter hash:ip
+Error: ipset v7.17: Set cannot be created: set with the same name already exists
+
+2025-05-14 20:13:00,873 [ERROR] Failed to initialize iptables: Command 'ipset create wl_test_filter hash:ip' returned non-zero exit status 1.
+2025-05-14 20:13:00,873 [ERROR] Failed to add resource: Command 'ipset create wl_test_filter hash:ip' returned non-zero exit status 1.
+2025-05-14 20:13:00,874 [INFO] 192.168.2.10 - - [14/May/2025 20:13:00] "[32mPOST /add_resource HTTP/1.1[0m" 302 -
+2025-05-14 20:13:00,909 [INFO] 192.168.2.10 - - [14/May/2025 20:13:00] "GET / HTTP/1.1" 200 -
+2025-05-14 20:13:02,465 [INFO] 192.168.2.10 - - [14/May/2025 20:13:02] "[35m[1mGET /resource/2 HTTP/1.1[0m" 500 -
+2025-05-14 20:13:02,632 [INFO] 192.168.2.10 - - [14/May/2025 20:13:02] "GET /resource/2?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-14 20:13:02,642 [INFO] 192.168.2.10 - - [14/May/2025 20:13:02] "GET /resource/2?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-14 20:13:02,677 [INFO] 192.168.2.10 - - [14/May/2025 20:13:02] "GET /resource/2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-14 20:13:52,604 [DEBUG] Collecting stats for chain: TEST_FILTER
+2025-05-14 20:13:52,609 [ERROR] Stats collection failed: Command 'iptables -L TEST_FILTER -v -n -x' returned non-zero exit status 1.
+2025-05-14 20:14:52,670 [DEBUG] Collecting stats for chain: TEST_FILTER
+2025-05-14 20:14:52,675 [ERROR] Stats collection failed: Command 'iptables -L TEST_FILTER -v -n -x' returned non-zero exit status 1.
+2025-05-14 20:15:52,697 [DEBUG] Collecting stats for chain: TEST_FILTER
+2025-05-14 20:15:52,701 [ERROR] Stats collection failed: Command 'iptables -L TEST_FILTER -v -n -x' returned non-zero exit status 1.
+2025-05-14 20:16:52,713 [DEBUG] Collecting stats for chain: TEST_FILTER
+2025-05-14 20:16:52,719 [ERROR] Stats collection failed: Command 'iptables -L TEST_FILTER -v -n -x' returned non-zero exit status 1.
+2025-05-14 20:17:52,781 [DEBUG] Collecting stats for chain: TEST_FILTER
+2025-05-14 20:17:52,787 [ERROR] Stats collection failed: Command 'iptables -L TEST_FILTER -v -n -x' returned non-zero exit status 1.
+2025-05-14 20:18:52,849 [DEBUG] Collecting stats for chain: TEST_FILTER
+2025-05-14 20:18:52,855 [ERROR] Stats collection failed: Command 'iptables -L TEST_FILTER -v -n -x' returned non-zero exit status 1.
+2025-05-14 20:19:52,892 [DEBUG] Collecting stats for chain: TEST_FILTER
+2025-05-14 20:19:52,896 [ERROR] Stats collection failed: Command 'iptables -L TEST_FILTER -v -n -x' returned non-zero exit status 1.
+2025-05-14 20:20:52,957 [DEBUG] Collecting stats for chain: TEST_FILTER
+2025-05-14 20:20:52,960 [ERROR] Stats collection failed: Command 'iptables -L TEST_FILTER -v -n -x' returned non-zero exit status 1.
+2025-05-14 21:09:38,677 [INFO] Initializing iptables with nftables
+2025-05-14 21:09:38,677 [DEBUG] Initializing database
+2025-05-14 21:09:38,677 [INFO] Initializing database
+2025-05-14 21:09:38,678 [INFO] Database initialized
+2025-05-14 21:09:38,678 [DEBUG] Executing nft command: nft flush ruleset
+2025-05-14 21:09:38,702 [DEBUG] Command output: 
+2025-05-14 21:09:38,702 [DEBUG] Querying resources table
+2025-05-14 21:09:38,703 [INFO] Configuring resource: test (172.30.30.1, chain: TEST_FILTER)
+2025-05-14 21:09:38,703 [DEBUG] Executing nft command: nft add table ip filter
+2025-05-14 21:09:38,707 [DEBUG] Command output: 
+2025-05-14 21:09:38,707 [DEBUG] Executing nft command: nft add chain ip filter TEST_FILTER { type filter hook forward priority 0 ; }
+2025-05-14 21:09:38,722 [DEBUG] Command output: 
+2025-05-14 21:09:38,722 [DEBUG] Executing nft command: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+2025-05-14 21:09:38,746 [ERROR] Command failed: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+Error: Error: Could not process rule: No such file or directory
+add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+                   ^^^^^^^
+
+2025-05-14 21:09:38,746 [ERROR] Failed to initialize nftables: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-14 21:09:38,747 [ERROR] Initialization failed: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-14 21:09:38,925 [INFO] Starting traffic statistics collection
+2025-05-14 21:09:38,962 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-14 21:09:38,967 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-14 21:09:39,165 [INFO] Initializing database
+2025-05-14 21:09:39,166 [INFO] Database initialized
+2025-05-14 21:09:39,213 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.10:5000
+2025-05-14 21:09:39,213 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-14 21:09:39,215 [INFO]  * Restarting with stat
+2025-05-14 21:09:39,455 [INFO] Initializing database
+2025-05-14 21:09:39,456 [INFO] Database initialized
+2025-05-14 21:09:39,470 [WARNING]  * Debugger is active!
+2025-05-14 21:09:39,471 [INFO]  * Debugger PIN: 806-566-559
+2025-05-14 21:09:49,731 [INFO] 192.168.2.10 - - [14/May/2025 21:09:49] "GET / HTTP/1.1" 200 -
+2025-05-14 21:09:52,223 [INFO] 192.168.2.10 - - [14/May/2025 21:09:52] "[35m[1mGET /resource/1 HTTP/1.1[0m" 500 -
+2025-05-14 21:09:52,377 [INFO] 192.168.2.10 - - [14/May/2025 21:09:52] "[36mGET /resource/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-14 21:09:52,409 [INFO] 192.168.2.10 - - [14/May/2025 21:09:52] "[36mGET /resource/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-14 21:10:00,026 [INFO] 192.168.2.10 - - [14/May/2025 21:10:00] "GET /add_resource HTTP/1.1" 200 -
+2025-05-14 21:10:02,840 [INFO] 192.168.2.10 - - [14/May/2025 21:10:02] "GET / HTTP/1.1" 200 -
+2025-05-14 21:10:29,161 [INFO] 192.168.2.10 - - [14/May/2025 21:10:29] "GET /add_resource HTTP/1.1" 200 -
+2025-05-14 21:10:38,979 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-14 21:10:38,984 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-14 21:10:40,551 [INFO] Adding resource: test2 (172.30.30.1, ports: , chain: TEST2_FILTER)
+2025-05-14 21:10:40,586 [INFO] Resource added to database
+2025-05-14 21:10:40,618 [INFO] Initializing iptables with nftables
+2025-05-14 21:10:40,618 [DEBUG] Initializing database
+2025-05-14 21:10:40,618 [INFO] Initializing database
+2025-05-14 21:10:40,619 [INFO] Database initialized
+2025-05-14 21:10:40,619 [DEBUG] Executing nft command: nft flush ruleset
+2025-05-14 21:10:40,676 [DEBUG] Command output: 
+2025-05-14 21:10:40,676 [DEBUG] Querying resources table
+2025-05-14 21:10:40,677 [INFO] Configuring resource: test (172.30.30.1, chain: TEST_FILTER)
+2025-05-14 21:10:40,677 [DEBUG] Executing nft command: nft add table ip filter
+2025-05-14 21:10:40,712 [DEBUG] Command output: 
+2025-05-14 21:10:40,713 [DEBUG] Executing nft command: nft add chain ip filter TEST_FILTER { type filter hook forward priority 0 ; }
+2025-05-14 21:10:40,796 [DEBUG] Command output: 
+2025-05-14 21:10:40,796 [DEBUG] Executing nft command: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+2025-05-14 21:10:40,825 [ERROR] Command failed: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+Error: Error: Could not process rule: No such file or directory
+add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+                   ^^^^^^^
+
+2025-05-14 21:10:40,825 [ERROR] Failed to initialize nftables: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-14 21:10:40,825 [ERROR] Failed to add resource: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-14 21:10:40,827 [INFO] 192.168.2.10 - - [14/May/2025 21:10:40] "[32mPOST /add_resource HTTP/1.1[0m" 302 -
+2025-05-14 21:10:40,852 [INFO] 192.168.2.10 - - [14/May/2025 21:10:40] "GET / HTTP/1.1" 200 -
+2025-05-14 21:10:42,998 [INFO] 192.168.2.10 - - [14/May/2025 21:10:42] "[35m[1mGET /resource/3 HTTP/1.1[0m" 500 -
+2025-05-14 21:10:43,144 [INFO] 192.168.2.10 - - [14/May/2025 21:10:43] "GET /resource/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-14 21:10:43,167 [INFO] 192.168.2.10 - - [14/May/2025 21:10:43] "GET /resource/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-14 21:10:43,222 [INFO] 192.168.2.10 - - [14/May/2025 21:10:43] "GET /resource/3?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-15 10:01:54,849 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 10:01:54,972 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 10:01:55,124 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:48:31,709 [INFO] Starting traffic statistics collection
+2025-05-15 11:48:31,743 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:48:31,750 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:48:31,758 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:48:32,386 [INFO] Initializing database
+2025-05-15 11:48:32,389 [INFO] Database initialized
+2025-05-15 11:48:32,449 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.10:5000
+2025-05-15 11:48:32,449 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-15 11:48:32,452 [INFO]  * Restarting with stat
+2025-05-15 11:48:32,938 [INFO] Initializing database
+2025-05-15 11:48:32,940 [INFO] Database initialized
+2025-05-15 11:48:32,968 [WARNING]  * Debugger is active!
+2025-05-15 11:48:32,971 [INFO]  * Debugger PIN: 394-293-573
+2025-05-15 11:49:31,802 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:49:31,810 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:49:31,818 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:50:31,871 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:50:31,888 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:50:31,895 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:51:31,965 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:51:31,974 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:51:31,983 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:52:32,011 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:52:32,020 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:52:32,030 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:53:04,622 [INFO] 192.168.2.10 - - [15/May/2025 11:53:04] "GET / HTTP/1.1" 200 -
+2025-05-15 11:53:05,738 [INFO] 192.168.2.10 - - [15/May/2025 11:53:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-15 11:53:09,489 [INFO] 192.168.2.10 - - [15/May/2025 11:53:09] "[35m[1mGET /resource/2 HTTP/1.1[0m" 500 -
+2025-05-15 11:53:09,916 [INFO] 192.168.2.10 - - [15/May/2025 11:53:09] "[36mGET /resource/2?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-15 11:53:09,942 [INFO] 192.168.2.10 - - [15/May/2025 11:53:09] "[36mGET /resource/2?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-15 11:53:15,089 [INFO] 192.168.2.10 - - [15/May/2025 11:53:15] "[35m[1mGET /resource/1 HTTP/1.1[0m" 500 -
+2025-05-15 11:53:15,425 [INFO] 192.168.2.10 - - [15/May/2025 11:53:15] "[36mGET /resource/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-15 11:53:15,455 [INFO] 192.168.2.10 - - [15/May/2025 11:53:15] "[36mGET /resource/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-15 11:53:32,097 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:53:32,106 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:53:32,115 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:54:32,215 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:54:32,303 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:54:32,377 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:55:27,585 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:55:27,599 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:55:27,614 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:56:27,692 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:56:27,718 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:56:27,724 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:57:27,756 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:57:27,766 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:57:27,774 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:58:27,795 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:58:27,914 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:58:27,970 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 11:59:28,030 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 11:59:28,040 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 11:59:28,050 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:00:28,079 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:00:28,097 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:00:28,105 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:01:15,755 [INFO] 127.0.0.1 - - [15/May/2025 12:01:15] "[33mGET /resourse/3 HTTP/1.1[0m" 404 -
+2025-05-15 12:01:28,180 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:01:28,194 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:01:28,209 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:01:38,603 [INFO] 127.0.0.1 - - [15/May/2025 12:01:38] "[35m[1mGET /resource/3 HTTP/1.1[0m" 500 -
+2025-05-15 12:02:28,268 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:02:28,278 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:02:28,339 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:03:28,518 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:03:28,666 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:03:28,709 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:04:28,747 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:04:28,758 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:04:28,769 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:05:29,360 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:05:29,391 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:05:29,434 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:06:44,280 [INFO] Initializing iptables with nftables
+2025-05-15 12:06:44,281 [DEBUG] Initializing database
+2025-05-15 12:06:44,281 [INFO] Initializing database
+2025-05-15 12:06:44,281 [INFO] Database initialized
+2025-05-15 12:06:44,282 [DEBUG] Executing nft command: nft flush ruleset
+2025-05-15 12:06:44,344 [DEBUG] Command output: 
+2025-05-15 12:06:44,344 [DEBUG] Querying resources table
+2025-05-15 12:06:44,344 [INFO] Configuring resource: test (172.30.30.1, chain: TEST_FILTER)
+2025-05-15 12:06:44,344 [DEBUG] Executing nft command: nft add table ip filter
+2025-05-15 12:06:44,356 [DEBUG] Command output: 
+2025-05-15 12:06:44,357 [DEBUG] Executing nft command: nft add chain ip filter TEST_FILTER { type filter hook forward priority 0 ; }
+2025-05-15 12:06:44,366 [DEBUG] Command output: 
+2025-05-15 12:06:44,367 [DEBUG] Executing nft command: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+2025-05-15 12:06:44,385 [ERROR] Command failed: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+Error: Error: Could not process rule: No such file or directory
+add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+                   ^^^^^^^
+
+2025-05-15 12:06:44,386 [ERROR] Failed to initialize nftables: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-15 12:06:44,386 [ERROR] Initialization failed: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-15 12:06:45,180 [INFO] Starting traffic statistics collection
+2025-05-15 12:06:45,190 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:06:45,198 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:06:45,210 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:06:45,530 [INFO] Initializing database
+2025-05-15 12:06:45,531 [INFO] Database initialized
+2025-05-15 12:06:45,605 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.10:5000
+2025-05-15 12:06:45,606 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-15 12:06:45,608 [INFO]  * Restarting with stat
+2025-05-15 12:06:45,960 [INFO] Initializing database
+2025-05-15 12:06:45,961 [INFO] Database initialized
+2025-05-15 12:06:45,982 [WARNING]  * Debugger is active!
+2025-05-15 12:06:45,983 [INFO]  * Debugger PIN: 394-293-573
+2025-05-15 12:07:25,699 [INFO] 192.168.2.10 - - [15/May/2025 12:07:25] "GET /resource/1 HTTP/1.1" 200 -
+2025-05-15 12:07:26,104 [INFO] 192.168.2.10 - - [15/May/2025 12:07:26] "GET /traffic_stats/1 HTTP/1.1" 200 -
+2025-05-15 12:07:45,265 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:07:45,296 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:07:45,336 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:07:57,225 [INFO] 127.0.0.1 - - [15/May/2025 12:07:57] "GET /resource/3 HTTP/1.1" 200 -
+2025-05-15 12:08:46,008 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:08:46,216 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:08:46,348 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:09:30,308 [INFO] 127.0.0.1 - - [15/May/2025 12:09:30] "GET /resource/3 HTTP/1.1" 200 -
+2025-05-15 12:09:46,415 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:09:46,438 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:09:46,445 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:09:53,207 [INFO] 127.0.0.1 - - [15/May/2025 12:09:53] "GET /resource/3 HTTP/1.1" 200 -
+2025-05-15 12:10:46,552 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:10:46,565 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:10:46,609 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:11:46,663 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:11:46,729 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:11:46,763 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:12:47,223 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:12:47,241 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:12:47,259 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:13:47,328 [DEBUG] Collected stats for TEST_FILTER: packets=0, bytes=0
+2025-05-15 12:13:47,341 [DEBUG] Collected stats for TEST1_FILTER: packets=0, bytes=0
+2025-05-15 12:13:47,360 [DEBUG] Collected stats for TEST2_FILTER: packets=0, bytes=0
+2025-05-15 12:14:32,178 [INFO] Initializing iptables with nftables
+2025-05-15 12:14:32,179 [DEBUG] Initializing database
+2025-05-15 12:14:32,179 [INFO] Initializing database
+2025-05-15 12:14:32,180 [INFO] Database initialized
+2025-05-15 12:14:32,181 [DEBUG] Executing nft command: nft flush ruleset
+2025-05-15 12:14:32,198 [DEBUG] Command output: 
+2025-05-15 12:14:32,199 [DEBUG] Querying resources table
+2025-05-15 12:14:32,199 [INFO] Configuring resource: test (172.30.30.1, chain: TEST_FILTER)
+2025-05-15 12:14:32,199 [DEBUG] Executing nft command: nft add table ip filter
+2025-05-15 12:14:32,207 [DEBUG] Command output: 
+2025-05-15 12:14:32,207 [DEBUG] Executing nft command: nft add chain ip filter TEST_FILTER { type filter hook forward priority 0 ; }
+2025-05-15 12:14:32,217 [DEBUG] Command output: 
+2025-05-15 12:14:32,217 [DEBUG] Executing nft command: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+2025-05-15 12:14:32,239 [ERROR] Command failed: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+Error: Error: Could not process rule: No such file or directory
+add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+                   ^^^^^^^
+
+2025-05-15 12:14:32,240 [ERROR] Failed to initialize nftables: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-15 12:14:32,240 [ERROR] Initialization failed: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-15 12:14:32,639 [INFO] Starting traffic statistics collection
+2025-05-15 12:14:32,921 [INFO] Initializing database
+2025-05-15 12:14:32,922 [INFO] Database initialized
+2025-05-15 12:14:32,985 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.10:5000
+2025-05-15 12:14:32,985 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-15 12:14:32,987 [INFO]  * Restarting with stat
+2025-05-15 12:14:33,294 [INFO] Initializing database
+2025-05-15 12:14:33,295 [INFO] Database initialized
+2025-05-15 12:14:33,315 [WARNING]  * Debugger is active!
+2025-05-15 12:14:33,316 [INFO]  * Debugger PIN: 394-293-573
+2025-05-15 12:14:39,896 [INFO] 192.168.2.10 - - [15/May/2025 12:14:39] "GET / HTTP/1.1" 200 -
+2025-05-15 12:14:42,845 [INFO] 192.168.2.10 - - [15/May/2025 12:14:42] "GET /resource/2 HTTP/1.1" 200 -
+2025-05-15 12:14:44,405 [INFO] 192.168.2.10 - - [15/May/2025 12:14:44] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:14:55,274 [INFO] 192.168.2.10 - - [15/May/2025 12:14:55] "GET /resource/1 HTTP/1.1" 200 -
+2025-05-15 12:14:55,726 [INFO] 192.168.2.10 - - [15/May/2025 12:14:55] "GET /traffic_stats/1 HTTP/1.1" 200 -
+2025-05-15 12:15:25,043 [INFO] 192.168.2.10 - - [15/May/2025 12:15:25] "GET /resource/2 HTTP/1.1" 200 -
+2025-05-15 12:15:25,469 [INFO] 192.168.2.10 - - [15/May/2025 12:15:25] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:17:16,254 [INFO] 192.168.2.10 - - [15/May/2025 12:17:16] "GET /resource/2 HTTP/1.1" 200 -
+2025-05-15 12:17:17,305 [INFO] 192.168.2.10 - - [15/May/2025 12:17:17] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:17:36,857 [INFO] 192.168.2.10 - - [15/May/2025 12:17:36] "GET /resource/2 HTTP/1.1" 200 -
+2025-05-15 12:17:37,605 [INFO] 192.168.2.10 - - [15/May/2025 12:17:37] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:17:56,551 [INFO] 192.168.2.10 - - [15/May/2025 12:17:56] "GET /resource/2 HTTP/1.1" 200 -
+2025-05-15 12:17:57,273 [INFO] 192.168.2.10 - - [15/May/2025 12:17:57] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:17:58,949 [INFO] 192.168.2.10 - - [15/May/2025 12:17:58] "GET /resource/2 HTTP/1.1" 200 -
+2025-05-15 12:17:59,563 [INFO] 192.168.2.10 - - [15/May/2025 12:17:59] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:18:15,426 [INFO] 192.168.2.10 - - [15/May/2025 12:18:15] "GET /resource/3 HTTP/1.1" 200 -
+2025-05-15 12:18:16,307 [INFO] 192.168.2.10 - - [15/May/2025 12:18:16] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:24:07,689 [INFO] Initializing iptables with nftables
+2025-05-15 12:24:07,695 [DEBUG] Initializing database
+2025-05-15 12:24:07,696 [INFO] Initializing database
+2025-05-15 12:24:07,700 [INFO] Database initialized
+2025-05-15 12:24:07,705 [DEBUG] Executing nft command: nft flush ruleset
+2025-05-15 12:24:07,729 [DEBUG] Command output: 
+2025-05-15 12:24:07,730 [DEBUG] Querying resources table
+2025-05-15 12:24:07,730 [INFO] Configuring resource: test (172.30.30.1, chain: TEST_FILTER)
+2025-05-15 12:24:07,730 [DEBUG] Executing nft command: nft add table ip filter
+2025-05-15 12:24:07,737 [DEBUG] Command output: 
+2025-05-15 12:24:07,737 [DEBUG] Executing nft command: nft add chain ip filter TEST_FILTER { type filter hook forward priority 0 ; }
+2025-05-15 12:24:07,748 [DEBUG] Command output: 
+2025-05-15 12:24:07,749 [DEBUG] Executing nft command: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+2025-05-15 12:24:07,775 [ERROR] Command failed: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+Error: Error: Could not process rule: No such file or directory
+add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+                   ^^^^^^^
+
+2025-05-15 12:24:07,775 [ERROR] Failed to initialize nftables: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-15 12:24:07,775 [ERROR] Initialization failed: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-15 12:24:08,077 [INFO] Starting traffic statistics collection
+2025-05-15 12:24:08,381 [INFO] Initializing database
+2025-05-15 12:24:08,383 [INFO] Database initialized
+2025-05-15 12:24:08,445 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.10:5000
+2025-05-15 12:24:08,446 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-15 12:24:08,447 [INFO]  * Restarting with stat
+2025-05-15 12:24:08,758 [INFO] Initializing database
+2025-05-15 12:24:08,759 [INFO] Database initialized
+2025-05-15 12:24:08,778 [WARNING]  * Debugger is active!
+2025-05-15 12:24:08,780 [INFO]  * Debugger PIN: 394-293-573
+2025-05-15 12:24:19,702 [INFO] 192.168.2.10 - - [15/May/2025 12:24:19] "GET /resource/3 HTTP/1.1" 200 -
+2025-05-15 12:24:20,177 [INFO] 192.168.2.10 - - [15/May/2025 12:24:20] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:24:30,827 [INFO] 192.168.2.10 - - [15/May/2025 12:24:30] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:24:37,883 [INFO] 192.168.2.10 - - [15/May/2025 12:24:37] "GET /resource/2 HTTP/1.1" 200 -
+2025-05-15 12:24:38,262 [INFO] 192.168.2.10 - - [15/May/2025 12:24:38] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:24:46,451 [INFO] 192.168.2.10 - - [15/May/2025 12:24:46] "GET /resource/2 HTTP/1.1" 200 -
+2025-05-15 12:24:46,777 [INFO] 192.168.2.10 - - [15/May/2025 12:24:46] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:24:57,240 [INFO] 192.168.2.10 - - [15/May/2025 12:24:57] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:25:06,974 [INFO] 192.168.2.10 - - [15/May/2025 12:25:06] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:25:16,976 [INFO] 192.168.2.10 - - [15/May/2025 12:25:16] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:25:26,984 [INFO] 192.168.2.10 - - [15/May/2025 12:25:26] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:25:37,786 [INFO] 192.168.2.10 - - [15/May/2025 12:25:37] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:25:47,763 [INFO] 192.168.2.10 - - [15/May/2025 12:25:47] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:25:57,992 [INFO] 192.168.2.10 - - [15/May/2025 12:25:57] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:26:07,790 [INFO] 192.168.2.10 - - [15/May/2025 12:26:07] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:26:17,795 [INFO] 192.168.2.10 - - [15/May/2025 12:26:17] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:26:27,904 [INFO] 192.168.2.10 - - [15/May/2025 12:26:27] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:26:37,799 [INFO] 192.168.2.10 - - [15/May/2025 12:26:37] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:26:47,806 [INFO] 192.168.2.10 - - [15/May/2025 12:26:47] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:26:57,802 [INFO] 192.168.2.10 - - [15/May/2025 12:26:57] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:27:07,806 [INFO] 192.168.2.10 - - [15/May/2025 12:27:07] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:27:17,808 [INFO] 192.168.2.10 - - [15/May/2025 12:27:17] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:27:23,945 [INFO] 192.168.2.10 - - [15/May/2025 12:27:23] "GET /resource/2 HTTP/1.1" 200 -
+2025-05-15 12:27:24,331 [INFO] 192.168.2.10 - - [15/May/2025 12:27:24] "GET /traffic_stats/2 HTTP/1.1" 200 -
+2025-05-15 12:27:28,506 [INFO] 192.168.2.10 - - [15/May/2025 12:27:28] "GET /resource/3 HTTP/1.1" 200 -
+2025-05-15 12:27:29,003 [INFO] 192.168.2.10 - - [15/May/2025 12:27:29] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:27:39,075 [INFO] 192.168.2.10 - - [15/May/2025 12:27:39] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:27:49,037 [INFO] 192.168.2.10 - - [15/May/2025 12:27:49] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:27:59,040 [INFO] 192.168.2.10 - - [15/May/2025 12:27:59] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:28:09,349 [INFO] 192.168.2.10 - - [15/May/2025 12:28:09] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:28:09,580 [INFO] 192.168.2.10 - - [15/May/2025 12:28:09] "GET /resource/3 HTTP/1.1" 200 -
+2025-05-15 12:28:09,825 [INFO] 192.168.2.10 - - [15/May/2025 12:28:09] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:28:20,678 [INFO] 192.168.2.10 - - [15/May/2025 12:28:20] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:28:31,780 [INFO] 192.168.2.10 - - [15/May/2025 12:28:31] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:28:41,790 [INFO] 192.168.2.10 - - [15/May/2025 12:28:41] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:28:51,775 [INFO] 192.168.2.10 - - [15/May/2025 12:28:51] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:29:01,775 [INFO] 192.168.2.10 - - [15/May/2025 12:29:01] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:29:11,775 [INFO] 192.168.2.10 - - [15/May/2025 12:29:11] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:29:21,784 [INFO] 192.168.2.10 - - [15/May/2025 12:29:21] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:29:31,779 [INFO] 192.168.2.10 - - [15/May/2025 12:29:31] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:29:41,777 [INFO] 192.168.2.10 - - [15/May/2025 12:29:41] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:29:51,776 [INFO] 192.168.2.10 - - [15/May/2025 12:29:51] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:30:01,775 [INFO] 192.168.2.10 - - [15/May/2025 12:30:01] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:30:11,774 [INFO] 192.168.2.10 - - [15/May/2025 12:30:11] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:30:21,773 [INFO] 192.168.2.10 - - [15/May/2025 12:30:21] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:30:31,780 [INFO] 192.168.2.10 - - [15/May/2025 12:30:31] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:30:41,779 [INFO] 192.168.2.10 - - [15/May/2025 12:30:41] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:30:51,776 [INFO] 192.168.2.10 - - [15/May/2025 12:30:51] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:31:01,849 [INFO] 192.168.2.10 - - [15/May/2025 12:31:01] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:31:11,807 [INFO] 192.168.2.10 - - [15/May/2025 12:31:11] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:31:21,885 [INFO] 192.168.2.10 - - [15/May/2025 12:31:21] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:31:31,817 [INFO] 192.168.2.10 - - [15/May/2025 12:31:31] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:31:41,814 [INFO] 192.168.2.10 - - [15/May/2025 12:31:41] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:31:51,812 [INFO] 192.168.2.10 - - [15/May/2025 12:31:51] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:32:01,813 [INFO] 192.168.2.10 - - [15/May/2025 12:32:01] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:32:11,814 [INFO] 192.168.2.10 - - [15/May/2025 12:32:11] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:32:21,836 [INFO] 192.168.2.10 - - [15/May/2025 12:32:21] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:32:31,817 [INFO] 192.168.2.10 - - [15/May/2025 12:32:31] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:32:41,817 [INFO] 192.168.2.10 - - [15/May/2025 12:32:41] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:32:51,841 [INFO] 192.168.2.10 - - [15/May/2025 12:32:51] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:33:02,537 [INFO] 192.168.2.10 - - [15/May/2025 12:33:02] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:33:12,074 [INFO] 192.168.2.10 - - [15/May/2025 12:33:12] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:33:21,977 [INFO] 192.168.2.10 - - [15/May/2025 12:33:21] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:33:31,996 [INFO] 192.168.2.10 - - [15/May/2025 12:33:31] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:33:41,991 [INFO] 192.168.2.10 - - [15/May/2025 12:33:41] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:33:51,954 [INFO] 192.168.2.10 - - [15/May/2025 12:33:51] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:34:01,952 [INFO] 192.168.2.10 - - [15/May/2025 12:34:01] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:34:11,952 [INFO] 192.168.2.10 - - [15/May/2025 12:34:11] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:34:22,135 [INFO] 192.168.2.10 - - [15/May/2025 12:34:22] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:34:32,284 [INFO] 192.168.2.10 - - [15/May/2025 12:34:32] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:34:42,320 [INFO] 192.168.2.10 - - [15/May/2025 12:34:42] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:34:52,351 [INFO] 192.168.2.10 - - [15/May/2025 12:34:52] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:35:02,391 [INFO] 192.168.2.10 - - [15/May/2025 12:35:02] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:35:12,408 [INFO] 192.168.2.10 - - [15/May/2025 12:35:12] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:35:22,762 [INFO] 192.168.2.10 - - [15/May/2025 12:35:22] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:35:32,477 [INFO] 192.168.2.10 - - [15/May/2025 12:35:32] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:35:42,251 [INFO] 192.168.2.10 - - [15/May/2025 12:35:42] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:35:52,099 [INFO] 192.168.2.10 - - [15/May/2025 12:35:52] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:36:02,056 [INFO] 192.168.2.10 - - [15/May/2025 12:36:02] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:36:12,039 [INFO] 192.168.2.10 - - [15/May/2025 12:36:12] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:36:22,038 [INFO] 192.168.2.10 - - [15/May/2025 12:36:22] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:36:32,034 [INFO] 192.168.2.10 - - [15/May/2025 12:36:32] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:36:42,372 [INFO] 192.168.2.10 - - [15/May/2025 12:36:42] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:36:52,339 [INFO] 192.168.2.10 - - [15/May/2025 12:36:52] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:37:02,345 [INFO] 192.168.2.10 - - [15/May/2025 12:37:02] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:37:12,343 [INFO] 192.168.2.10 - - [15/May/2025 12:37:12] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:37:22,359 [INFO] 192.168.2.10 - - [15/May/2025 12:37:22] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:37:32,384 [INFO] 192.168.2.10 - - [15/May/2025 12:37:32] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:37:42,353 [INFO] 192.168.2.10 - - [15/May/2025 12:37:42] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:37:52,344 [INFO] 192.168.2.10 - - [15/May/2025 12:37:52] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:38:02,653 [INFO] 192.168.2.10 - - [15/May/2025 12:38:02] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:38:12,461 [INFO] 192.168.2.10 - - [15/May/2025 12:38:12] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:38:22,501 [INFO] 192.168.2.10 - - [15/May/2025 12:38:22] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:38:32,505 [INFO] 192.168.2.10 - - [15/May/2025 12:38:32] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:38:42,492 [INFO] 192.168.2.10 - - [15/May/2025 12:38:42] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:38:52,496 [INFO] 192.168.2.10 - - [15/May/2025 12:38:52] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:39:02,481 [INFO] 192.168.2.10 - - [15/May/2025 12:39:02] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:39:12,476 [INFO] 192.168.2.10 - - [15/May/2025 12:39:12] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:39:22,476 [INFO] 192.168.2.10 - - [15/May/2025 12:39:22] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:39:32,472 [INFO] 192.168.2.10 - - [15/May/2025 12:39:32] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:39:42,466 [INFO] 192.168.2.10 - - [15/May/2025 12:39:42] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:39:52,467 [INFO] 192.168.2.10 - - [15/May/2025 12:39:52] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 12:40:02,463 [INFO] 192.168.2.10 - - [15/May/2025 12:40:02] "GET /traffic_stats/3 HTTP/1.1" 200 -
+2025-05-15 13:50:49,176 [INFO] Initializing iptables with nftables
+2025-05-15 13:50:49,177 [DEBUG] Initializing database
+2025-05-15 13:50:49,178 [INFO] Initializing database
+2025-05-15 13:50:49,184 [INFO] Database initialized
+2025-05-15 13:50:49,185 [DEBUG] Executing nft command: nft flush ruleset
+2025-05-15 13:50:49,221 [ERROR] Command failed: nft flush ruleset
+Error: Error: Could not process rule: Operation not permitted
+flush ruleset
+^^^^^^^^^^^^^^
+
+2025-05-15 13:50:49,222 [ERROR] Failed to initialize nftables: Command '['nft', 'flush', 'ruleset']' returned non-zero exit status 1.
+2025-05-15 13:50:49,222 [ERROR] Initialization failed: Command '['nft', 'flush', 'ruleset']' returned non-zero exit status 1.
+2025-05-15 13:56:47,936 [INFO] Initializing iptables with nftables
+2025-05-15 13:56:47,936 [DEBUG] Initializing database
+2025-05-15 13:56:47,937 [INFO] Initializing database
+2025-05-15 13:56:47,938 [INFO] Database initialized
+2025-05-15 13:56:47,938 [DEBUG] Executing nft command: nft flush ruleset
+2025-05-15 13:56:47,942 [ERROR] Command failed: nft flush ruleset
+Error: Error: Could not process rule: Operation not permitted
+flush ruleset
+^^^^^^^^^^^^^^
+
+2025-05-15 13:56:47,942 [ERROR] Failed to initialize nftables: Command '['nft', 'flush', 'ruleset']' returned non-zero exit status 1.
+2025-05-15 13:56:47,942 [ERROR] Initialization failed: Command '['nft', 'flush', 'ruleset']' returned non-zero exit status 1.
+2025-05-15 13:57:19,829 [INFO] Initializing iptables with nftables
+2025-05-15 13:57:19,829 [DEBUG] Initializing database
+2025-05-15 13:57:19,829 [INFO] Initializing database
+2025-05-15 13:57:19,830 [INFO] Database initialized
+2025-05-15 13:57:19,830 [DEBUG] Executing nft command: nft flush ruleset
+2025-05-15 13:57:19,834 [ERROR] Command failed: nft flush ruleset
+Error: Error: Could not process rule: Operation not permitted
+flush ruleset
+^^^^^^^^^^^^^^
+
+2025-05-15 13:57:19,834 [ERROR] Failed to initialize nftables: Command '['nft', 'flush', 'ruleset']' returned non-zero exit status 1.
+2025-05-15 13:57:19,834 [ERROR] Initialization failed: Command '['nft', 'flush', 'ruleset']' returned non-zero exit status 1.
+2025-05-15 13:59:44,443 [INFO] Initializing iptables with nftables
+2025-05-15 13:59:44,443 [DEBUG] Initializing database
+2025-05-15 13:59:44,443 [INFO] Initializing database
+2025-05-15 13:59:44,444 [INFO] Database initialized
+2025-05-15 13:59:44,444 [DEBUG] Executing nft command: nft flush ruleset
+2025-05-15 13:59:44,479 [DEBUG] Command output: 
+2025-05-15 13:59:44,479 [DEBUG] Querying resources table
+2025-05-15 13:59:44,479 [INFO] Configuring resource: test (172.30.30.1, chain: TEST_FILTER)
+2025-05-15 13:59:44,480 [DEBUG] Executing nft command: nft add table ip filter
+2025-05-15 13:59:44,485 [DEBUG] Command output: 
+2025-05-15 13:59:44,485 [DEBUG] Executing nft command: nft add chain ip filter TEST_FILTER { type filter hook forward priority 0 ; }
+2025-05-15 13:59:44,498 [DEBUG] Command output: 
+2025-05-15 13:59:44,499 [DEBUG] Executing nft command: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+2025-05-15 13:59:44,515 [ERROR] Command failed: nft add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+Error: Error: Could not process rule: No such file or directory
+add rule ip filter forward ip daddr 172.30.30.1 tcp dport 80 jump TEST_FILTER
+                   ^^^^^^^
+
+2025-05-15 13:59:44,515 [ERROR] Failed to initialize nftables: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-15 13:59:44,515 [ERROR] Initialization failed: Command '['nft', 'add', 'rule', 'ip', 'filter', 'forward', 'ip daddr 172.30.30.1 tcp dport 80', 'jump TEST_FILTER']' returned non-zero exit status 1.
+2025-05-15 13:59:44,671 [INFO] Starting traffic statistics collection
+2025-05-15 13:59:44,671 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 13:59:44,672 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 13:59:44,672 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 13:59:45,204 [INFO] Initializing database
+2025-05-15 13:59:45,205 [INFO] Database initialized
+2025-05-15 13:59:45,277 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.10:5000
+2025-05-15 13:59:45,277 [INFO] [33mPress CTRL+C to quit[0m
+2025-05-15 13:59:45,279 [INFO]  * Restarting with stat
+2025-05-15 13:59:45,522 [INFO] Initializing database
+2025-05-15 13:59:45,523 [INFO] Database initialized
+2025-05-15 13:59:45,537 [WARNING]  * Debugger is active!
+2025-05-15 13:59:45,540 [INFO]  * Debugger PIN: 243-115-501
+2025-05-15 14:00:31,936 [INFO] 192.168.2.10 - - [15/May/2025 14:00:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-15 14:00:44,716 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:00:44,717 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:00:44,717 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:01:44,780 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:01:44,780 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:01:44,781 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:02:44,799 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:02:44,800 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:02:44,800 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:03:44,807 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:03:44,807 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:03:44,808 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:04:44,870 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:04:44,875 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:04:44,876 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:05:44,945 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:05:44,945 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:05:44,946 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:06:45,007 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:06:45,007 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:06:45,007 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:07:45,043 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:07:45,043 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:07:45,043 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:08:45,089 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:08:45,089 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:08:45,089 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:09:45,096 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:09:45,097 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:09:45,097 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:10:45,152 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:10:45,153 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:10:45,153 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:11:45,211 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:11:45,211 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:11:45,211 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:12:45,273 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:12:45,273 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:12:45,273 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:13:45,348 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:13:45,349 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:13:45,349 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:14:45,423 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:14:45,423 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:14:45,423 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:15:45,482 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:15:45,482 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:15:45,482 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:16:45,555 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:16:45,555 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:16:45,555 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:17:45,564 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:17:45,564 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:17:45,565 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'
+2025-05-15 14:18:46,251 [ERROR] Error reading /var/log/iptables_wl.log: [Errno 2] No such file or directory: '/var/log/iptables_wl.log'
+2025-05-15 14:18:46,251 [ERROR] Error reading /var/log/iptables_bl.log: [Errno 2] No such file or directory: '/var/log/iptables_bl.log'
+2025-05-15 14:18:46,251 [ERROR] Error reading /var/log/iptables_tbl.log: [Errno 2] No such file or directory: '/var/log/iptables_tbl.log'

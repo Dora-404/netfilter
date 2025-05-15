@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Filter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Traffic Filter</h1>
+        <a href="{{ url_for('add_resource') }}" class="btn btn-primary">Add Resource</a>
+        <h2>Resources</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>IP</th>
+                    <th>Ports</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for resource in resources %}
+                <tr>
+                    <td>{{ resource['name'] }}</td>
+                    <td>{{ resource['ip'] }}</td>
+                    <td>{{ resource['ports'] or 'All' }}</td>
+                    <td>
+                        <a href="{{ url_for('manage_resource', resource_id=resource['id']) }}" class="btn btn-sm btn-info">Manage</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
